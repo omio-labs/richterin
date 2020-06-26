@@ -5,8 +5,12 @@ name: Great Expectations Runner
 on:
   push:
     branches: [ master, develop ]
+    paths:
+      - "runners/great_expectations/**"
   pull_request:
     branches: [ master, develop ]
+    paths:
+      - "runners/great_expectations/**"
 
 jobs:
   test:
