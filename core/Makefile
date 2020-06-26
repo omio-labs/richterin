@@ -1,2 +1,5 @@
+fmt:
+	gofmt -w .
+
 unit_test:
-	go test
+	go test -v .
