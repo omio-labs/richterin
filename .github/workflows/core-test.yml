@@ -35,6 +35,10 @@ jobs:
       working-directory: core
       run: go build -v .
 
+    - name: Lint
+      working-directory: core
+      run: test -z "$(gofmt -l .)"
+
     - name: Test
       working-directory: core
       run: go test -v .
