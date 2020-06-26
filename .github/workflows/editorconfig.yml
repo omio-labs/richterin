@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: EditorConfig-Action
-        uses: zbeekman/EditorConfig-Action@v1.1.1
+        uses: zbeekman/EditorConfig-Action@v1.1.0
