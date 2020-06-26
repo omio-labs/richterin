@@ -20,5 +20,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.0
-    - run: npm install eclint
-    - run: eclint .
+    - run: |
+        npm install eclint
+        eclint .
