@@ -1,0 +1,5 @@
+core:
+- core/**
+
+runner_great_expectations:
+- runners/great_expectations/**
