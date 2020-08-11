@@ -1,0 +1,5 @@
+Flask==1.1.2
+great-expectations==0.11.8
+sqlalchemy==1.3.18
+pybigquery==0.4.15
+marshmallow-dataclass[enum, union]==8.0.0
