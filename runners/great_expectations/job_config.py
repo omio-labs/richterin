@@ -33,8 +33,7 @@ class Dataset:
 @dataclass
 class Expectation:
     type: ExpectationType
-    column_name: str
-    properties: Dict[str, Any]
+    parameters: Dict[str, Any]
     threshold_percent: float = field(metadata={"validate": Range(min=0.0, max=100.0)})
     runner: str
     severity: str
@@ -49,6 +48,7 @@ class SQLTransformation:
 @dataclass
 class Timeframe:
     months: int
+    column: str
 
 
 @dataclass

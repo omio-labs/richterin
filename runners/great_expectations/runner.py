@@ -30,10 +30,9 @@ class GERunner:
             dataset = SqlAlchemyDataset(table_name=table_name, engine=self.bq_engine)
         else:
             dataset = SqlAlchemyDataset(custom_sql=sql, engine=self.bq_engine)
-        basic_options = {'column': expectation.column_name, 'mostly': expectation.threshold_percent * 0.01,
-                         'result_format': DEFAULT_GE_RESULT_FORMAT}
+        basic_options = {'mostly': expectation.threshold_percent * 0.01, 'result_format': DEFAULT_GE_RESULT_FORMAT}
         expectation_function = expectation.type.value
-        result = expectation_function(dataset, {**basic_options, **expectation.properties})
+        result = expectation_function(dataset, {**basic_options, **expectation.parameters})
         return result
 
     def run(self, config: JobConfig):

@@ -14,6 +14,7 @@ def submit_ge_job():
         job_config_dict = request.get_json()
         job_config: JobConfig = JobConfigSchema().load(job_config_dict)
         ge_runner_service.logger.info("Received job config for GE: {}".format(job_config))
+        # TODO: Add websocket/async support?
         result = ge_runner.run(job_config)
     except Exception as e:
         # TODO: Return meaningful error responses
