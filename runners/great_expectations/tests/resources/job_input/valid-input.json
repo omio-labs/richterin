@@ -1,0 +1,39 @@
+{
+  "datasets": {
+    "customers": {
+      "id": "customer_dataset",
+      "schema": "com.retail.customers",
+      "instances": [
+          {
+            "type": "BIGQUERY",
+            "table": "retail.customers"
+          }
+      ]
+    },
+      "transactions": {
+      "id": "transactions_dataset",
+      "schema": "com.retail.transactions",
+      "instances": [
+          {
+            "type": "BIGQUERY",
+            "table": "retail.transactions"
+          }
+      ]
+    }
+  },
+  "transformation": {
+    "type": "SQL",
+    "query": "SELECT * FROM {{ customers }} INNER JOIN {{ transactions }} where cid = cid"
+  },
+  "expectation": {
+      "type": "NOT_NULL",
+      "parameters": { "column": "name"},
+      "threshold_percent": 95,
+      "runner": "GREAT_EXPECTATIONS",
+      "severity": "WARNING"
+    },
+  "timeframe": {
+    "months": 1,
+    "column": "transaction_data"
+  }
+}
