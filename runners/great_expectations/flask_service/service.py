@@ -1,7 +1,7 @@
 from flask import request, Flask, jsonify
 
-from runners.great_expectations.job_config import JobConfigSchema, JobConfig
-from runners.great_expectations.runner import GERunner
+from job_config import JobConfigSchema, JobConfig
+from runner import GERunner
 
 ge_runner_service = Flask(__name__)
 ge_runner_service.config.from_envvar('GE_SERVICE_SETTINGS')

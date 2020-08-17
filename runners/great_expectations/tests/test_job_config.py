@@ -4,8 +4,8 @@ import json
 
 from marshmallow import ValidationError
 
-from runners.great_expectations.expectations import ExpectationType
-from runners.great_expectations.job_config import JobConfigSchema, JobConfig, DatasetType
+from expectations import ExpectationType
+from job_config import JobConfigSchema, JobConfig, DatasetType
 
 RESOURCES_PATH = os.path.join(os.path.dirname(__file__), 'resources', 'job_input')
 

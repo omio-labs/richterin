@@ -5,7 +5,7 @@ from typing import List, Dict, Optional, Any
 import marshmallow_dataclass
 from marshmallow.validate import Range, Equal, ContainsNoneOf, Length
 
-from runners.great_expectations.expectations import ExpectationType
+from expectations import ExpectationType
 
 
 @dataclass

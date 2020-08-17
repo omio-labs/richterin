@@ -2,7 +2,7 @@ from great_expectations.dataset import SqlAlchemyDataset
 from jinja2 import Template
 from sqlalchemy import create_engine
 
-from runners.great_expectations.job_config import *
+from job_config import *
 
 DEFAULT_GE_RESULT_FORMAT = "SUMMARY"
 
