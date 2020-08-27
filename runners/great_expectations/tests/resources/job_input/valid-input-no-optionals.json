@@ -1,0 +1,21 @@
+{
+  "datasets": {
+    "customers": {
+      "id": "customer_dataset",
+      "schema": "com.retail.customers",
+      "instances": [
+          {
+            "type": "BIGQUERY",
+            "table": "retail.customers"
+          }
+      ]
+    }
+  },
+  "expectation": {
+      "type": "NOT_NULL",
+      "parameters": { "column": "name"},
+      "threshold_percent": 95,
+      "runner": "GREAT_EXPECTATIONS",
+      "severity": "WARNING"
+    }
+}
