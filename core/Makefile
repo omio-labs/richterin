@@ -2,4 +2,4 @@ fmt:
 	gofmt -w .
 
 unit_test:
-	go test -v .
+	go test -v ./...
